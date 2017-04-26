@@ -1,3 +1,65 @@
+
+> *Git Submodules*: 
+`Submodules` allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another `repository` into your `project` and keep your commits separate.
+
+
+
+# Installation
+First, get the code using
+```bash
+$ git clone https://github.com/CodebitsDesign/typescript-mongo-express-angular-node-seed.git <project_name>
+$ cd <project_name>
+$ git submodule init
+$ git submodule update
+```
+Then, since backend and frontend are well separated through a REST-API, they are also installed separately.
+
+## Backend Setup
+To install & run the backend run
+```bash
+$ cd backend && yarn
+$ yarn start
+// for running the tests:
+$ yarn test
+```
+> The tests are also written in typescript.
+
+## Frontend Setup
+The frontend is suggested to be setup with [Angular Cli](https://github.com/angular/angular-cli). 
+
+
+## Models / Shared Code
+the `backend` / `frontend` just pull the `models` from `npm` and can run totally independently, while still writing the code only once. Of course, having to `npm version patch` and `npm publish` the models all the time in order to use them in the `backend` / `frontend` is a bit annoying, but that's the tradeoff of modular code.
+
+## Development
+The project is split into subprojects that can be developed independently. Those subprojects are the `backend`, `frontend` and `models`.
+
+### Backend-Development
+The backend is a separate git submodule and is located at `backend`. 
+To get going, install as described above, then start a server with
+```bash
+$ yarn start
+```
+
+or run the tests using
+```bash
+$ yarn test
+```
+
+### Frontend-Development
+See [Angular Cli](https://github.com/angular/angular-cli).
+
+### Models-Development
+Since both the `backend` and the `frontend` are using the same data-structure, the data-models are stored and maintained independently.
+
+In order to write new models, add a new `my-model.model.ts` file and export it in `index.d.ts`. 
+Once you're done, you can `npm version patch` and then `npm publish`. 
+Like this, the models are retrievable by `npm` in the `backend-` and `frontend-`projects, in order for them to be truly separated into their own git repos.
+
+
+
+-----------------------------
+
 # Foreword
 The interest in the MEAN Stack (Mongo-Express-Angular-Node) seems to have peaked in May 2016
 according to Google Trends.

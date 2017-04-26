@@ -1,12 +1,12 @@
 {
-  "name": "ts-mean-models",
+  "name": "typescript-mean-models",
   "version": "0.1.0",
   "description": "The models of the Typescript MEAN Stack Boilerplate",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Daniel Niederberger <bersling@gmail.com>",
+  "author": "Seokjin Seo <codebits.design@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^1.0.2",
