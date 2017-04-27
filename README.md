@@ -211,7 +211,7 @@ Git diff says subproject is dirty:
 
 > ```bash
 > $ git diff
-> $ diff --git a/frontend b/frontend
+> diff --git a/frontend b/frontend
 > --- a/frontend
 > +++ b/frontend
 > @@ -1 +1 @@
@@ -221,8 +221,6 @@ Git diff says subproject is dirty:
 >> either committing or undoing the changes/evolutions within each of your submodules, before going back to the parent repo (where the diff shouldn't report "dirty" files anymore). To undo all changes to your submodule just cd into the root directory of your submodule and do:
 >> ```bash
 >> $ git submodule foreach --recursive git checkout .
-
- 
 
 
 ----------------------------------------------------------
