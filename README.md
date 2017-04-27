@@ -163,6 +163,10 @@ Like this, the models are retrievable by `npm install` in the `backend-` and `fr
 # Publish the local repository to `Github` remote Repository
 
 ```bash
+$ git status
+
+$ git diff; git submodule foreach 'git diff'
+
 $ git add .
 
 $ git commit -a
@@ -189,7 +193,10 @@ $ git push --recurse-submodules=on-demand
 > $ git push -u origin master
 > 
 > $ git push --recurse-submodules=on-demand
-> 
+>
+> //  produce a nice unified diff of what is changed in your main project and all your subprojects as well:
+> $ git diff; git submodule foreach 'git diff'
+>
 > ```
 
 
