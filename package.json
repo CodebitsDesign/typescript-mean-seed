@@ -1,10 +1,10 @@
 {
-  "name": "ts-mean",
+  "name": "typescript-mean",
   "version": "0.0.1",
-  "description": "Boilerplate for a TS-MEAN App",
+  "description": "Boilerplate for a Typescript-MEAN Fullstack App",
   "main": "index.js",
   "dependencies": {
-    "ts-node": "^1.6.1"
+    "ts-node": "^3.0.2"
   },
   "devDependencies": {},
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bersling/typescript-mongo-express-angular-node-seed"
+    "url": "git+https://github.com/CodebitsDesign/typescript-mean-seed"
   },
   "keywords": [
     "Boilerplate",
@@ -23,10 +23,10 @@
     "Angular",
     "MongoDB"
   ],
-  "author": "Daniel Niederberger <bersling@gmail.com>",
+  "author": "Seokjin Seo <codebits.design@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bersling/typescript-mongo-express-angular-node-seed/issues"
+    "url": "https://github.com/CodebitsDesign/typescript-mean-seed/issues"
   },
-  "homepage": "https://github.com/bersling/typescript-mongo-express-angular-node-seed#readme"
+  "homepage": "https://github.com/CodebitsDesign/typescript-mean-seed#readme"
 }

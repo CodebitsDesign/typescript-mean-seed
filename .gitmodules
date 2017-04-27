@@ -1,9 +1,12 @@
-[submodule "typescript-mongo-express-node-seed"]
-	path = typescript-mongo-express-node-seed
-	url = https://github.com/bersling/typescript-mongo-express-node-seed
+[submodule "typescript-mean-seed"]
+	path = typescript-mean-seed
+	url = https://github.com/CodebitsDesign/typescript-mean-seed.git
 [submodule "backend"]
 	path = backend
-	url = https://github.com/bersling/typescript-mongo-express-node-seed
+	url = https://github.com/CodebitsDesign/typescript-mean-backend.git
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/CodebitsDesign/angular4-material-frontend.git
+[submodule "models"]
+	path = models
+	url = https://github.com/CodebitsDesign/typescript-mean-models.git
