@@ -29,6 +29,7 @@ submodules will add the subproject into a directory named the same as the reposi
 > ```bash
 > // to unstage all of those files:
 > $ git rm -r --cached <subproject-folder>
+> 
 > // and then add the submodule with:
 > git submodule add <url_to_repo> <subproject-folder>
 > ```
@@ -98,11 +99,17 @@ $ git submodule update --remote --merge
 
 ask Git to check that all your submodules have been pushed properly before pushing the main project. The `git push` command takes the `--recurse-submodules` argument which can be set to either `“check”` or `“on-demand”`.
 
+> -   If `check` is used, it will be checked that all submodule commits that changed in the revisions to be pushed are available on a remote.
+> Otherwise the push will be aborted and exit with non-zero status.
+> 
+> -   If `on-demand` is used, all submodules that changed in the revisions to be pushed will be pushed.
+> If `on-demand` was not able to push all necessary revisions it will also be aborted and exit with non-zero status.
+
 ```bash
 $ git push --recurse-submodules=on-demand
 ```
 
-> go into each submodule and push to the remotes to make sure they're externally available and then try this push again for you.
+> go into each subgitmodule and push to the remotes to make sure they're externally available and then try this push again for you.
 
 ## Merging Submodule Changes
 

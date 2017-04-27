@@ -98,10 +98,12 @@ the `backend` / `frontend` just pull the `models` package from `npm` registry an
 ----------------------------------------------------------
 
 # Development
+
 The project is split into subprojects that can be developed independently. 
 Those subprojects are the `backend`, `frontend` and `models`.
 
 ## Backend-Development
+
 The `backend` is a separate git submodule and is located at `backend`. 
 To get going, install as described above, then start a server with
 
@@ -115,6 +117,7 @@ $ yarn test
 ```
 
 ## Frontend-Development
+
 See [Angular Cli](https://github.com/angular/angular-cli).
 The frontend is a separate git submodule and is located at `frontend`. 
 
@@ -133,6 +136,7 @@ $ yarn test
 ```
 
 ## Models-Development
+
 Since both the `backend` and the `frontend` are using the same data-structure, the data-models are stored and maintained independently.
 
 In order to write new models, add a new `my-model.model.ts` file and export it in `index.d.ts`. 
@@ -147,6 +151,7 @@ Like this, the models are retrievable by `npm install` in the `backend-` and `fr
 > Like this, the `backend` / `frontend` just pull the models package from the `npm` registry (add the package to "dependencies" field of `package.json` file) and can run totally independently, while still writing the code only once. 
 > 
 > Of course, having to `npm version patch`(or `yarn version`) and `npm publish`(or `yarn publish`) the models to the `npm` registry all the time in order to use them in the `backend` / `frontend` is a bit annoying, but that's the tradeoff of modular code.
+>
 > ```bash
 > $ yarn version
 > ...
@@ -164,6 +169,28 @@ $ git commit -a
 
 $ git push --recurse-submodules=on-demand
 ```
+
+> More detail:
+>
+> ```bash
+> // if show a git remote info:
+> $ git remote -v show
+> origin
+>  ...
+> $ git remote show origin> 
+>
+> // if change a new remote repository url:
+> $ git remote set-url origin https://github.com/CodebitsDesign/typescript-mean-seed.git
+>
+> // if add a new remote repository url:
+> $ git remote add origin https://github.com/CodebitsDesign/typescript-mean-seed.git
+> 
+> // if publish a local repository to remote repository:
+> $ git push -u origin master
+> 
+> $ git push --recurse-submodules=on-demand
+> 
+> ```
 
 
 ----------------------------------------------------------
