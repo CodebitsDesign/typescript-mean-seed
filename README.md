@@ -184,9 +184,9 @@ $ git push --recurse-submodules=on-demand
 > $ git remote -v show
 > origin
 >  ...
-> $ git remote show origin> 
+> $ git remote show origin
 >
-> // if change a new remote repository url:
+> // if change to a new remote repository url:
 > $ git remote set-url origin https://github.com/CodebitsDesign/typescript-mean-seed.git
 >
 > // if add a new remote repository url:
@@ -197,10 +197,32 @@ $ git push --recurse-submodules=on-demand
 > 
 > $ git push --recurse-submodules=on-demand
 >
-> //  produce a nice unified diff of what is changed in your main project and all your subprojects as well:
+> // produce a nice unified diff of what is changed in your main project and all your subprojects as well:
 > $ git diff; git submodule foreach 'git diff'
 >
 > ```
+
+
+----------------------------------------------------------
+
+## ISSUE 
+
+Git diff says subproject is dirty:
+
+> ```bash
+> $ git diff
+> $ diff --git a/frontend b/frontend
+> --- a/frontend
+> +++ b/frontend
+> @@ -1 +1 @@
+> -Subproject commit 34a574f10e206ff74ab83349248bee15f486211c
+> +Subproject commit 34a574f10e206ff74ab83349248bee15f486211c-dirty
+> ```
+>> either committing or undoing the changes/evolutions within each of your submodules, before going back to the parent repo (where the diff shouldn't report "dirty" files anymore). To undo all changes to your submodule just cd into the root directory of your submodule and do:
+>> ```bash
+>> $ git submodule foreach --recursive git checkout .
+
+ 
 
 
 ----------------------------------------------------------
