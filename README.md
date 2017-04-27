@@ -177,6 +177,9 @@ $ git push --recurse-submodules=on-demand
 > More detail:
 >
 > ```bash
+> // if list a git config:
+> $ git config -l
+> 
 > // if show a git remote info:
 > $ git remote -v show
 > origin
