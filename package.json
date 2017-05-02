@@ -6,7 +6,9 @@
   "dependencies": {
     "ts-node": "^3.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^7.0.14"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "update-submodule": "git submodule foreach git pull origin master"

@@ -161,7 +161,7 @@ $ git commit -m "Merge Tom's Changes"  (5)
 > (3) We can check the SHA-1s again
 > (4) Resolve the conflicted submodule entry (5) Commit our merge
 
------------------------------------------------------------------
+-----------------------------------------------------
 
 # Submodule Tips
 
